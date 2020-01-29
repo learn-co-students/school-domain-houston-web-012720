@@ -10,7 +10,7 @@ end
 
 
 def add_student(name, grade)
-    roster[grade] ||= []
+    roster[grade] ||= [] # also could use if not or unless statement
     roster[grade] << name
     
 end
@@ -19,6 +19,6 @@ def grade(grade)
 end
 
 def sort
-@roster.sort
+@roster.each_value {|kids| kids.sort! }
 end
 end
